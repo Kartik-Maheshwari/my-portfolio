@@ -14,10 +14,12 @@ const Navbar = () => {
   return (
     <nav style={navbarStyle}>
       {/* Navbar content */}
-      <ul className='flex text-white'>
+      <ul className='flex text-white py-2 text-2xl justify-center gap-x-7 '>
         <li>Home</li>
         <li>About</li>
-        <li>Contact</li>
+        <li>Skills</li>
+        <li>Mini Projects</li>
+        <li>Mega Projects</li>
       </ul>
     </nav>
   );
