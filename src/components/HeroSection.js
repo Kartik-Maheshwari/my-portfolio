@@ -11,10 +11,10 @@ const HeroSection = ({links}) => {
 
   return (
     <div className='flex flex-col gap-y-3 items-center w-full transition-all duration-300'>
-        <div className='text-white text-8xl font-[600] text-center'>Kartik Maheshwari</div>
+        <div className='text-white text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-semibold text-center'>Kartik Maheshwari</div>
         
-        <div className='font-[400] text-white text-6xl flex ml-0 gap-x-3 '>
-        <div className='left-0'>I am a</div> 
+        <div className='font-normal text-white text-2xl sm:text-3xl md:text-4xl lg:text-6xl flex items-center mt-2'>
+        <div className='mr-2'>I am a</div> 
         <div>
           <Typewriter 
             options={{
@@ -32,7 +32,7 @@ const HeroSection = ({links}) => {
         </div>
         </div>
 
-        <div className='text-6xl text-white flex gap-x-4 py-2'>
+        <div className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white flex gap-x-4 py-2'>
         {links.map((icon, index) => {
           const Icon = icon.image;
           return(
