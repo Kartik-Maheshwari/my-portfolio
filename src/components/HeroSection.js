@@ -11,7 +11,7 @@ const HeroSection = ({links}) => {
 
   return (
     <div className='flex flex-col gap-y-3 items-center w-full transition-all duration-300'>
-        <div className='text-white text-8xl font-[600]'>Kartik Maheshwari</div>
+        <div className='text-white text-8xl font-[600] text-center'>Kartik Maheshwari</div>
         
         <div className='font-[400] text-white text-6xl flex ml-0 gap-x-3 '>
         <div className='left-0'>I am a</div> 
