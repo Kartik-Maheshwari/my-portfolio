@@ -36,33 +36,33 @@ export default function App() {
         />
 
         <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
-          <img src='../images/vscode.png' style={{ width: '15%', marginLeft: '70%' }} alt='im'/>
+          <img src='../images/react.webp' style={{ width: '15%', marginLeft: '70%' }} alt='im'/>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
-          <img src='../images/cloud.svg' style={{ display: 'block', width: '20%', marginLeft: '55%' }} alt='im'/>
-          <img src='../images/vscode.png' style={{ display: 'block', width: '10%', marginLeft: '15%' }} alt='im'/>
+        <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.3 }}>
+          <img src='../images/css.png' style={{ display: 'block', width: '20%', marginLeft: '55%' }} alt='im'/>
+          <img src='../images/git.png' style={{ display: 'block', width: '10%', marginLeft: '15%' }} alt='im'/>
         </ParallaxLayer>
 
         <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.1 }}>
-          <img src='../images/cloud.svg' style={{ display: 'block', width: '20%', marginLeft: '70%' }} alt='im'/>
-          <img src='../images/cloud.svg' style={{ display: 'block', width: '20%', marginLeft: '40%' }} alt='im'/>
+          <img src='../images/cpp.svg' style={{ display: 'block', width: '15%', marginLeft: '70%' }} alt='im'/>
+          {/* <img src='../images/cloud.svg' style={{ display: 'block', width: '20%', marginLeft: '40%' }} alt='im'/> */}
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.2 }}>
-          <img src='../images/cloud.svg' style={{ display: 'block', width: '10%', marginLeft: '10%' }} alt='im'/>
-          <img src='../images/cloud.svg' style={{ display: 'block', width: '20%', marginLeft: '75%' }} alt='im'/>
+          <img src='../images/python.png' style={{ display: 'block', width: '10%', marginLeft: '10%' }} alt='im'/>
+          <img src='../images/html.png' style={{ display: 'block', width: '20%', marginLeft: '75%' }} alt='im'/>
         </ParallaxLayer>
 
         <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
-          <img src='../images/cloud.svg' style={{ display: 'block', width: '20%', marginLeft: '60%' }} alt='im'/>
-          <img src='../images/cloud.svg' style={{ display: 'block', width: '25%', marginLeft: '30%' }} alt='im'/>
-          <img src='../images/cloud.svg' style={{ display: 'block', width: '10%', marginLeft: '80%' }} alt='im'/>
+          <img src='../images/js.png' style={{ display: 'block', width: '20%', marginLeft: '60%' }} alt='im'/>
+          <img src='../images/tailwind.png' style={{ display: 'block', width: '25%', marginLeft: '30%' }} alt='im'/>
+          <img src='../images/mongo.webp' style={{ display: 'block', width: '10%', marginLeft: '80%' }} alt='im'/>
         </ParallaxLayer>
 
         <ParallaxLayer offset={2.6} speed={0.4} style={{ opacity: 0.6 }}>
-          <img src='../images/cloud.svg' style={{ display: 'block', width: '20%', marginLeft: '5%' }} alt='im'/>
-          <img src='../images/cloud.svg' style={{ display: 'block', width: '15%', marginLeft: '75%' }} alt='im'/>
+          <img src='../images/react.webp' style={{ display: 'block', width: '20%', marginLeft: '5%' }} alt='im'/>
+          <img src='../images/figma.png' style={{ display: 'block', width: '12%', marginLeft: '75%' }} alt='im'/>
         </ParallaxLayer>
 
         <ParallaxLayer

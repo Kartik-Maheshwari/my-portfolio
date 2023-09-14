@@ -50,7 +50,6 @@ const Navbar = () => {
         } duration-300 ease-in-out`}
       >
         <li className="py-2">Home</li>
-        <li className="py-2">About</li>
         <li className="py-2">Skills</li>
         <li className="py-2">Mini Projects</li>
         <li className="py-2">Mega Projects</li>
@@ -58,7 +57,6 @@ const Navbar = () => {
       {/* Desktop Menu */}
       <ul className="hidden md:flex text-white py-2 text-2xl justify-center space-x-7">
         <li>Home</li>
-        <li>About</li>
         <li>Skills</li>
         <li>Mini Projects</li>
         <li>Mega Projects</li>
