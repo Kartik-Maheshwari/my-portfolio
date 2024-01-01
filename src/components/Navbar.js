@@ -1,16 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ parallaxRef }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToOffset = (offset) => {
+    if (parallaxRef.current) {
+      parallaxRef.current.scrollTo(offset);
+    }
+    toggleMenu(); // Close the menu after scrolling
+  };
+
   return (
     <nav className="bg-opacity-20 bg-black p-2 fixed top-0 left-0 w-full z-50">
       <div className="flex justify-between items-center">
-        <h1 className="md:hidden text-white text-2xl">{'< Kartik/>'}</h1>
+        <h1 className="md:hidden text-white text-2xl">{"< Kartik/>"}</h1>
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white text-2xl focus:outline-none"
@@ -44,22 +51,79 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <ul
         className={`${
-          isMenuOpen ? 'block' : 'hidden'
+          isMenuOpen ? "block" : "hidden"
         } md:hidden text-white text-2xl pt-2 transition-transform transform ${
-          isMenuOpen ? 'translate-y-0' : '-translate-y-full'
+          isMenuOpen ? "translate-y-0" : "-translate-y-full"
         } duration-300 ease-in-out`}
       >
-        <li className="py-2">Home</li>
-        <li className="py-2">Skills</li>
-        <li className="py-2">Mini Projects</li>
-        <li className="py-2">Mega Projects</li>
+        <li className="py-2">
+          <button
+            className="focus:outline-none"
+            onClick={() => scrollToOffset(0)}
+          >
+            Home
+          </button>
+        </li>
+        <li className="py-2">
+          <button
+            className="focus:outline-none"
+            onClick={() => scrollToOffset(1)}
+          >
+            Skills
+          </button>
+        </li>
+        <li className="py-2">
+          <button
+            className="focus:outline-none"
+            onClick={() => scrollToOffset(2)}
+          >
+            Mini Projects
+          </button>
+        </li>
+        <li className="py-2">
+          <button
+            className="focus:outline-none"
+            onClick={() => scrollToOffset(3)}
+          >
+            Mega Projects
+          </button>
+        </li>
       </ul>
       {/* Desktop Menu */}
       <ul className="hidden md:flex text-white py-2 text-2xl justify-center space-x-7">
-        <li>Home</li>
-        <li>Skills</li>
-        <li>Mini Projects</li>
-        <li>Mega Projects</li>
+        <li>
+          <button
+            className="focus:outline-none"
+            onClick={() => scrollToOffset(0)}
+          >
+            Home
+          </button>
+        </li>
+        <li>
+          <button
+            className="focus:outline-none"
+            onClick={() => scrollToOffset(1)}
+          >
+            Skills
+          </button>
+        </li>
+        <li>
+          <button
+            className="focus:outline-none"
+            onClick={() => scrollToOffset(2)}
+          >
+            Mini Projects
+          </button>
+          s
+        </li>
+        <li>
+          <button
+            className="focus:outline-none"
+            onClick={() => scrollToOffset(3)}
+          >
+            Mega Projects
+          </button>
+        </li>
       </ul>
     </nav>
   );
