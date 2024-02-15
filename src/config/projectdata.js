@@ -1,0 +1,58 @@
+const projectdata = [
+  {
+    id: 1,
+    title: "Pro1",
+    tagline: "tag1",
+    category: "cat1",
+    liveUrl: "https://github.com/kirti-poddar151",
+    repositoryUrl: "https://github.com/kirti-poddar151",
+    img: "",
+  },
+  {
+    id: 2,
+    title: "Pro2",
+    tagline: "tag2",
+    category: "cat2",
+    liveUrl: "https://github.com/kirti-poddar151",
+    repositoryUrl: "https://github.com/kirti-poddar151",
+    img: "",
+  },
+  {
+    id: 3,
+    title: "Pro3",
+    tagline: "tag3",
+    category: "cat1",
+    liveUrl: "https://github.com/kirti-poddar151",
+    repositoryUrl: "https://github.com/kirti-poddar151",
+    img: "",
+  },
+  {
+    id: 4,
+    title: "Pro4",
+    tagline: "tag4",
+    category: "cat3",
+    liveUrl: "https://github.com/kirti-poddar151",
+    repositoryUrl: "https://github.com/kirti-poddar151",
+    img: "",
+  },
+  {
+    id: 5,
+    title: "Pro5",
+    tagline: "tag5",
+    category: "cat2",
+    liveUrl: "https://github.com/kirti-poddar151",
+    repositoryUrl: "https://github.com/kirti-poddar151",
+    img: "",
+  },
+  {
+    id: 6,
+    title: "Pro6",
+    tagline: "tag6",
+    category: "cat1",
+    liveUrl: "https://github.com/kirti-poddar151",
+    repositoryUrl: "https://github.com/kirti-poddar151",
+    img: "",
+  },
+];
+
+export { projectdata };
