@@ -4,6 +4,9 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import { links } from "./config/data";
 import Skills from "./components/Skills";
+import Carousel from "./components/MiniProject";
+import { projectdata } from "./config/projectdata";
+import Projects from "./components/Projects";
 
 // const url = (name, wrap = false) =>`${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`;
 // const url = (name, wrap = false) =>`${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`;
@@ -154,7 +157,7 @@ export default function App() {
           style={{
             backgroundSize: "80%",
             backgroundPosition: "center",
-            backgroundImage: "url(../images/clients.svg)",
+            // backgroundImage: "url(../images/clients.svg)",
           }}
         />
 
@@ -208,11 +211,14 @@ export default function App() {
           }}
           // onClick={() => parallax.current.scrollTo(3)}
         >
-          <img
+          {/* <img
             src="../images/clients-main.svg"
             style={{ width: "40%" }}
             alt="im"
-          />
+          /> */}
+
+          {/* <Carousel /> */}
+          <Projects projects={projectdata} />
         </ParallaxLayer>
 
         <ParallaxLayer

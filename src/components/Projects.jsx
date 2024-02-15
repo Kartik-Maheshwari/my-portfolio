@@ -1,27 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import PortfolioItem from "./PortfolioItem/PortfolioItem";
+
+// import "./";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons/faExternalLinkSquareAlt";
+import { faGithubSquare } from "@fortawesome/free-brands-svg-icons/faGithubSquare";
+import { faUserLock } from "@fortawesome/free-solid-svg-icons/faUserLock";
 
 const Projects = ({ projects }) => {
-  const [selected, setSelected] = useState("featured");
+  const [selected, setSelected] = useState("");
   const [data, setData] = useState([]);
+  console.log("Data", data);
+
   const [projectList, setProjectList] = useState([]);
 
   useEffect(() => {
     let tempList = [];
+    console.log("Initial projects \n", projects);
+
     projects.map(({ category }) => {
       if (!tempList.includes(category)) {
         tempList.push(category);
       }
+      console.log("Category: \n", category);
 
       return null;
     });
     setProjectList(tempList);
   }, [projects]);
+  console.log("Projectlist", projectList);
+  console.log("Selected", selected);
 
   useEffect(() => {
     projectList.map((list) => {
+      if (selected === "") {
+        setData(projects);
+      }
       if (selected === list) {
         setData(projects.filter((project) => project.category === list));
       }
+      console.log("Projects: ", projects);
 
       return null;
     });
@@ -29,16 +49,16 @@ const Projects = ({ projects }) => {
   return (
     <section
       data-aos="fade-left"
-      className="portfolio"
+      className="bg-white flex-col items-center w-full"
       name="portfolio"
       id="portfolio"
     >
       {/* <Heading text="Portfolio" style={{ padding: "3rem" }} /> */}
-      <div className="heading-container" style={style}>
-        <h2 className="heading">{text}</h2>
+      <div className="heading-container">
+        <h2 className="heading">Projects</h2>
         <span></span>
       </div>
-      <div className="list">
+      <div className="m-10 p-0 list-none flex w-[85%] justify-around items-center ">
         {projectList &&
           projectList.map((list) => (
             <PortfolioItem
@@ -50,11 +70,11 @@ const Projects = ({ projects }) => {
             />
           ))}
       </div>
-      <div className="row">
+      <div className="flex flex-wrap px-0 py-8 justify-center items-center">
         {data.length &&
           data.map((item, index) => (
             <div className="column" key={index}>
-              <img src={item?.img.asset.url} alt={item.title} />
+              <img src={item.img} alt={item.title} />
               <div className="overlay">
                 <div className="left">
                   <h3>{item.title}</h3>

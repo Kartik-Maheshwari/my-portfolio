@@ -6,7 +6,7 @@ const projectdata = [
     category: "cat1",
     liveUrl: "https://github.com/kirti-poddar151",
     repositoryUrl: "https://github.com/kirti-poddar151",
-    img: "",
+    img: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fplatinumlist.net%2Fguide%2Fwp-content%2Fuploads%2F2023%2F03%2F8359_img_worlds_of_adventure-big1613913137.jpg-1024x683.webp&tbnid=Bz3J24JVz5OCIM&vet=12ahUKEwj1sdqOn62EAxUHamwGHY6vA7oQMygFegQIARB-..i&imgrefurl=https%3A%2F%2Fplatinumlist.net%2Fguide%2Feverything-you-need-to-know-about-img-worlds-of-adventure&docid=A0w5ojTkCPUH_M&w=1024&h=683&q=img&ved=2ahUKEwj1sdqOn62EAxUHamwGHY6vA7oQMygFegQIARB-",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const projectdata = [
     category: "cat2",
     liveUrl: "https://github.com/kirti-poddar151",
     repositoryUrl: "https://github.com/kirti-poddar151",
-    img: "",
+    img: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1701878932176351232%2FAlNU3WTK_400x400.jpg&tbnid=m4jTjUiU2MzZXM&vet=12ahUKEwj1sdqOn62EAxUHamwGHY6vA7oQMygAegQIARB0..i&imgrefurl=https%3A%2F%2Ftwitter.com%2FIMG&docid=Wqd7bw-e-AbXUM&w=300&h=300&q=img&ved=2ahUKEwj1sdqOn62EAxUHamwGHY6vA7oQMygAegQIARB0",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const projectdata = [
     category: "cat1",
     liveUrl: "https://github.com/kirti-poddar151",
     repositoryUrl: "https://github.com/kirti-poddar151",
-    img: "",
+    img: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1701878932176351232%2FAlNU3WTK_400x400.jpg&tbnid=m4jTjUiU2MzZXM&vet=12ahUKEwj1sdqOn62EAxUHamwGHY6vA7oQMygAegQIARB0..i&imgrefurl=https%3A%2F%2Ftwitter.com%2FIMG&docid=Wqd7bw-e-AbXUM&w=300&h=300&q=img&ved=2ahUKEwj1sdqOn62EAxUHamwGHY6vA7oQMygAegQIARB0",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const projectdata = [
     category: "cat3",
     liveUrl: "https://github.com/kirti-poddar151",
     repositoryUrl: "https://github.com/kirti-poddar151",
-    img: "",
+    img: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1701878932176351232%2FAlNU3WTK_400x400.jpg&tbnid=m4jTjUiU2MzZXM&vet=12ahUKEwj1sdqOn62EAxUHamwGHY6vA7oQMygAegQIARB0..i&imgrefurl=https%3A%2F%2Ftwitter.com%2FIMG&docid=Wqd7bw-e-AbXUM&w=300&h=300&q=img&ved=2ahUKEwj1sdqOn62EAxUHamwGHY6vA7oQMygAegQIARB0",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const projectdata = [
     category: "cat2",
     liveUrl: "https://github.com/kirti-poddar151",
     repositoryUrl: "https://github.com/kirti-poddar151",
-    img: "",
+    img: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1701878932176351232%2FAlNU3WTK_400x400.jpg&tbnid=m4jTjUiU2MzZXM&vet=12ahUKEwj1sdqOn62EAxUHamwGHY6vA7oQMygAegQIARB0..i&imgrefurl=https%3A%2F%2Ftwitter.com%2FIMG&docid=Wqd7bw-e-AbXUM&w=300&h=300&q=img&ved=2ahUKEwj1sdqOn62EAxUHamwGHY6vA7oQMygAegQIARB0",
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const projectdata = [
     category: "cat1",
     liveUrl: "https://github.com/kirti-poddar151",
     repositoryUrl: "https://github.com/kirti-poddar151",
-    img: "",
+    img: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1701878932176351232%2FAlNU3WTK_400x400.jpg&tbnid=m4jTjUiU2MzZXM&vet=12ahUKEwj1sdqOn62EAxUHamwGHY6vA7oQMygAegQIARB0..i&imgrefurl=https%3A%2F%2Ftwitter.com%2FIMG&docid=Wqd7bw-e-AbXUM&w=300&h=300&q=img&ved=2ahUKEwj1sdqOn62EAxUHamwGHY6vA7oQMygAegQIARB0",
   },
 ];
 

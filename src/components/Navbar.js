@@ -17,7 +17,16 @@ const Navbar = ({ parallaxRef }) => {
   return (
     <nav className="bg-opacity-20 bg-black p-2 fixed top-0 left-0 w-full z-50">
       <div className="flex justify-between items-center">
-        <h1 className="md:hidden text-white text-2xl">{"< Kartik/>"}</h1>
+        <h1 className="md:hidden text-white text-2xl">
+          {
+            <button
+              className="focus:outline-none"
+              onClick={() => scrollToOffset(0)}
+            >
+              {`<Kartik/>`}
+            </button>
+          }
+        </h1>
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white text-2xl focus:outline-none"
@@ -90,7 +99,7 @@ const Navbar = ({ parallaxRef }) => {
         </li>
       </ul>
       {/* Desktop Menu */}
-      <ul className="hidden md:flex text-white py-2 text-2xl justify-center space-x-7">
+      <ul className="hidden md:flex text-white font-semibold py-2 text-3xl justify-center space-x-7">
         <li>
           <button
             className="focus:outline-none"
@@ -114,7 +123,6 @@ const Navbar = ({ parallaxRef }) => {
           >
             Mini Projects
           </button>
-          s
         </li>
         <li>
           <button
