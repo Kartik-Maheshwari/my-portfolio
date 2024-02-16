@@ -3,7 +3,7 @@ import Card from "./Card";
 
 const Cards = (props) => {
   let courses = props.courses;
-  const [likedCourses, setLikedCourses] = useState([]);
+  // const [likedCourses, setLikedCourses] = useState([]);
   let allCourses = [];
   let category = props.category;
 
@@ -28,8 +28,8 @@ const Cards = (props) => {
           <Card
             course={course}
             key={course.id}
-            likedCourses={likedCourses}
-            setLikedCourses={setLikedCourses}
+            // likedCourses={likedCourses}
+            // setLikedCourses={setLikedCourses}
           />
         );
       })}

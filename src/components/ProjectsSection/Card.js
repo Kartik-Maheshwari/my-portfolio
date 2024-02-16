@@ -8,21 +8,22 @@ const Card = (props) => {
   let setLikedCourses = props.setLikedCourses;
 
   function clickHandler() {
-    if (likedCourses.includes(course.id)) {
-      //pehele se like hua pada hai
-      //to ham filter out kardenge prev state me se unn id jo jiss id ke equal current id na ho.
-      setLikedCourses((prev) => prev.filter((cid) => cid !== course.id));
-      // toast.warning("Like Removed");
-    } else {
-      //pehele se liked nahi hai ye course
-      //insert karna hai ye course liked course me
-      if (likedCourses.length === 0) {
-        setLikedCourses([course.id]);
-      } else {
-        setLikedCourses((prev) => [...prev, course.id]);
-      }
-      // toast.success("Like Successfully");
-    }
+    // if (likedCourses.includes(course.id)) {
+    //   //pehele se like hua pada hai
+    //   //to ham filter out kardenge prev state me se unn id jo jiss id ke equal current id na ho.
+    //   setLikedCourses((prev) => prev.filter((cid) => cid !== course.id));
+    //   // toast.warning("Like Removed");
+    // } else {
+    //   //pehele se liked nahi hai ye course
+    //   //insert karna hai ye course liked course me
+    //   if (likedCourses.length === 0) {
+    //     setLikedCourses([course.id]);
+    //   } else {
+    //     setLikedCourses((prev) => [...prev, course.id]);
+    //   }
+    //   // toast.success("Like Successfully");
+    // }
+    console.log("button is clicked");
   }
   return (
     <div className="w-[300px] bg-blue-950 bg-opacity-80 rounded-ms overflow-hidden rounded-md">
@@ -30,11 +31,12 @@ const Card = (props) => {
         <img src={course.image.url}></img>
         <div className="w-[40px] h-[40px] bg-white rounded-full absolute right-2 -bottom-3 grid place-items-center">
           <button onClick={clickHandler}>
-            {likedCourses.includes(course.id) ? (
+            {/* {likedCourses.includes(course.id) ? (
               <FcLike fontSize="1.75rem" />
             ) : (
               <FcLikePlaceholder fontSize="1.75rem" />
-            )}
+            )} */}
+            <FcLike fontSize="1.75rem" />
           </button>
         </div>
       </div>
