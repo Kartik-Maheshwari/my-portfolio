@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import Carousel from "./components/MiniProject";
 import { projectdata } from "./config/projectdata";
 import Projects from "./components/Projects";
+import ProjectSection from "./components/ProjectsSection/ProjectSection";
 
 // const url = (name, wrap = false) =>`${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`;
 // const url = (name, wrap = false) =>`${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`;
@@ -218,7 +219,8 @@ export default function App() {
           /> */}
 
           {/* <Carousel /> */}
-          <Projects projects={projectdata} />
+          {/* <Projects projects={projectdata} /> */}
+          <ProjectSection />
         </ParallaxLayer>
 
         <ParallaxLayer

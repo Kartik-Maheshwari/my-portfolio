@@ -58,7 +58,7 @@ const Projects = ({ projects }) => {
         <h2 className="heading">Projects</h2>
         <span></span>
       </div>
-      <div className="m-10 p-0 list-none flex w-[85%] justify-around items-center ">
+      <div className="m-2 p-0 list-none flex w-[85%] justify-around items-center ">
         {projectList &&
           projectList.map((list) => (
             <PortfolioItem
@@ -70,23 +70,32 @@ const Projects = ({ projects }) => {
             />
           ))}
       </div>
-      <div className="flex flex-wrap px-0 py-8 justify-center items-center">
+      <div className="flex flex-wrap p-0 sm:p-8 justify-center items-center">
         {data.length &&
           data.map((item, index) => (
-            <div className="column" key={index}>
-              <img src={item.img} alt={item.title} />
-              <div className="overlay">
-                <div className="left">
-                  <h3>{item.title}</h3>
-                  {item.tagline && <p>{item.tagline}</p>}
+            <div
+              className="flex flex-col justify-center items-center max-w-1/4 w-full mr-8 mt-8 self-auto rounded-xl shadow-md text-white transition-all duration-600 relative bg-white"
+              key={index}
+            >
+              <img
+                src="../images/sunrise.jpg"
+                className="w-full h-full object-cover opacity-100 rounded-md align-middle"
+                alt={item.title}
+              />
+              <div className="absolute w-full bg-black bg-opacity-60 px-4 py-6 flex transition-all duration-500 ease">
+                <div className="flex flex-col justify-center flex-2">
+                  <h3 className="font-bold text-lg">{item.title}</h3>
+                  {item.tagline && (
+                    <p className="text-xs text-gray-300">{item.tagline}</p>
+                  )}
                 </div>
-                <div className="right">
+                <div className="flex items-center justify-end flex-1 ">
                   {item.repositoryUrl !== "private" ? (
                     <a href={item.repositoryUrl}>
                       <FontAwesomeIcon
                         icon={faGithubSquare}
                         size="2x"
-                        className="icon"
+                        className="cursor-pointer text-white text-opacity-90 hover:text-white hover:scale-100"
                         style={{ marginRight: "0.3em" }}
                         title="Github Repo"
                       />
@@ -96,7 +105,7 @@ const Projects = ({ projects }) => {
                       <FontAwesomeIcon
                         icon={faUserLock}
                         size="2x"
-                        className="icon"
+                        className="cursor-pointer text-white text-opacity-90 hover:text-white hover:scale-100"
                         style={{ marginRight: "0.3em" }}
                         title="Private Repo"
                       />
