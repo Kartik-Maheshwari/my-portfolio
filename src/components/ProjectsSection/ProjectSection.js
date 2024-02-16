@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Cards from "./Cards";
 import Filter from "./Filter";
-import { apiUrl, filterData } from "./prjectdata";
+import { filterData, prodata } from "./prjectdata";
 // import { toast } from "react-toastify";
 import Spinner from "./Spinner";
 
@@ -12,22 +12,9 @@ const ProjectSection = () => {
 
   //so yaha par ham api call useEffect ki help se karnege kuki hame har UI render par kuch naya data chahiye.
 
-  async function fetchData() {
-    setLoading(true);
-    try {
-      let res = await fetch(apiUrl);
-      let output = await res.json();
-      // console.log(output);
-      setCourses(output.data);
-    } catch (error) {
-      //   toast.error("Something Went Wrong");
-    }
-    //for showing the loader
-    setLoading(false);
-  }
   //for hiding the loader
   useEffect(() => {
-    fetchData();
+    setCourses(prodata[0].data);
   }, []);
 
   return (
