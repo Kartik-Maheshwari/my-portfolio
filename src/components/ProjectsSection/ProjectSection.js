@@ -12,9 +12,20 @@ const ProjectSection = () => {
 
   //so yaha par ham api call useEffect ki help se karnege kuki hame har UI render par kuch naya data chahiye.
 
+  async function fetchData() {
+    setLoading(true);
+    try {
+      let data = prodata[0].data;
+      setCourses(data);
+    } catch (error) {
+      console.error("Something Went Wrong");
+    }
+    //for showing the loader
+    setLoading(false);
+  }
   //for hiding the loader
   useEffect(() => {
-    setCourses(prodata[0].data);
+    fetchData();
   }, []);
 
   return (
@@ -27,7 +38,7 @@ const ProjectSection = () => {
             setCategory={setCategory}
           />
         </div>
-        <div className="w-11/12 max-w-[1800px] mx-auto flex justify-center items-center max-h-[800px] overflow-scroll">
+        <div className="w-11/12 max-w-[1800px] mx-auto flex justify-center items-center max-h-[80vh] overflow-scroll">
           {loading ? (
             <Spinner />
           ) : (
