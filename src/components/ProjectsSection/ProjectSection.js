@@ -29,7 +29,10 @@ const ProjectSection = () => {
   }, []);
 
   return (
-    <div className="min-h-screen mt-36 flex flex-col w-full max-h-[500px]">
+    <div
+      data-aos="fade-left"
+      className="min-h-screen mt-36 flex flex-col w-full max-h-[500px]"
+    >
       <div className="">
         <div>
           <Filter

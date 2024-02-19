@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
@@ -8,11 +8,17 @@ import Carousel from "./components/MiniProject";
 import { projectdata } from "./config/projectdata";
 import Projects from "./components/Projects";
 import ProjectSection from "./components/ProjectsSection/ProjectSection";
+import Aos from "aos";
+import Aboutme from "./components/AboutMe/Aboutme";
 
 // const url = (name, wrap = false) =>`${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`;
 // const url = (name, wrap = false) =>`${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`;
 
 export default function App() {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   const parallax = useRef(null);
 
   const gradient = [
@@ -233,7 +239,8 @@ export default function App() {
             justifyContent: "center",
           }}
         >
-          <img src="../images/bash.svg" style={{ width: "40%" }} alt="im" />
+          {/* <img src="../images/bash.svg" style={{ width: "40%" }} alt="im" /> */}
+          <Aboutme />
         </ParallaxLayer>
       </Parallax>
     </div>
