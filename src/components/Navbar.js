@@ -86,7 +86,7 @@ const Navbar = ({ parallaxRef }) => {
             className="focus:outline-none"
             onClick={() => scrollToOffset(2)}
           >
-            Mini Projects
+            Projects
           </button>
         </li>
         <li className="py-2">
@@ -94,7 +94,7 @@ const Navbar = ({ parallaxRef }) => {
             className="focus:outline-none"
             onClick={() => scrollToOffset(3)}
           >
-            Mega Projects
+            About Me
           </button>
         </li>
       </ul>
@@ -121,7 +121,7 @@ const Navbar = ({ parallaxRef }) => {
             className="focus:outline-none"
             onClick={() => scrollToOffset(2)}
           >
-            Mini Projects
+            Projects
           </button>
         </li>
         <li>
@@ -129,7 +129,7 @@ const Navbar = ({ parallaxRef }) => {
             className="focus:outline-none"
             onClick={() => scrollToOffset(3)}
           >
-            Mega Projects
+            About Me
           </button>
         </li>
       </ul>
