@@ -1,33 +1,14 @@
-import React from "react";
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Aboutme = () => {
-  //   const [isIntersecting, setIsIntersecting] = useState(false);
-  //   const ref = useRef(null);
-
-  //   useEffect(() => {
-  //     const observer = new IntersectionObserver(
-  //       ([entry]) => {
-  //         setIsIntersecting(entry.isIntersecting);
-  //       },
-  //       { rootMargin: "-300px" }
-  //     );
-  //     console.log(isIntersecting);
-  //     observer.observe(ref.current);
-
-  //     return () => observer.disconnect();
-  //   }, [isIntersecting]);
-
-  //   useEffect(() => {
-  //     if (isIntersecting) {
-  //       ref.current.querySelectorAll("div").forEach((el) => {
-  //         el.classList.add("slide-in");
-  //       });
-  //     }
-  //   }, [isIntersecting]);
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-16 ">
+    <div className="w-full h-full flex flex-col items-center justify-center gap-14 ">
       <div className="text-4xl" data-aos="fade-left">
         About Me
       </div>

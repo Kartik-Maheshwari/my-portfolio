@@ -1,0 +1,13 @@
+main div:first-child {
+    transform: translateX(-150%);
+    opacity: 0;
+}
+
+main div:last-child {
+    transform: translateX(150%);
+    opacity: 0;
+}
+
+.slide-in {
+    transform: translateX(0) !important;
+}
