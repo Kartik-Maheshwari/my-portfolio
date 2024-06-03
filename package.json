@@ -1,5 +1,6 @@
 {
   "name": "my-portfolio",
+  "homepage": "https://Kartik-Maheshwari.github.io/My-W[ortfolio-Website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -51,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "tailwindcss": "^3.3.3"
   }
 }
