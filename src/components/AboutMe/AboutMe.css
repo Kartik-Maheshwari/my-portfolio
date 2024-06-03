@@ -11,3 +11,26 @@ main div:last-child {
 .slide-in {
     transform: translateX(0) !important;
 }
+
+.underline {
+    position: relative;
+  }
+  
+  .underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust the position of the underline */
+    width: 100%;
+    height: 2px; /* Adjust the thickness of the underline */
+    background-color: #0b3c5d; /* Match the text color or use any color */
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .underline-visible::after {
+    transform: scaleX(1); /* Show the underline */
+    transform-origin: bottom left;
+  }
+  

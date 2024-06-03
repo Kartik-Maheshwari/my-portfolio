@@ -1,6 +1,7 @@
 import React from "react";
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 // import { toast } from 'react-toastify';
+import { motion } from "framer-motion";
 
 const Card = (props) => {
   let course = props.course;
@@ -26,7 +27,16 @@ const Card = (props) => {
     console.log("button is clicked");
   }
   return (
-    <div className="w-[300px] bg-blue-950 bg-opacity-80 rounded-ms overflow-hidden rounded-md">
+    <motion.div
+      className="w-[300px] bg-blue-950 bg-opacity-80 rounded-ms overflow-hidden rounded-md"
+      whileInView={{
+        opacity: [0, 1],
+        scale: [0.5, 1], // start from scale 0.5 and go to 1
+        transition: {
+          duration: 1, // adjust duration as needed
+        },
+      }}
+    >
       <div className="relative">
         <img src={course.image.url}></img>
         <div className="w-[40px] h-[40px] bg-white rounded-full absolute right-2 -bottom-3 grid place-items-center">
@@ -50,7 +60,7 @@ const Card = (props) => {
             : course.description}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -4,6 +4,21 @@
 
 html, body {
   scroll-behavior: smooth;
+  overflow: hidden;
+  height: 100%;
+}
+
+
+:root {
+  /* --font-base: "DM Sans", sans-serif; */
+
+  --primary-color: #edf2f8;
+  --secondary-color: #4484ce;
+  --black-color: #030303;
+  --lightGray-color: #e4e4e4;
+  --gray-color: #6b7688;
+  --brown-color: #46364a;
+  --white-color: #ffffff;
 }
 
 body {
@@ -31,6 +46,6 @@ code {
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */

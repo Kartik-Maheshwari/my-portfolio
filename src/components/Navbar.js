@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Navbar = ({ parallaxRef }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeButton, setActiveButton] = useState("Home");
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -13,6 +14,35 @@ const Navbar = ({ parallaxRef }) => {
     }
     toggleMenu(); // Close the menu after scrolling
   };
+
+  const handleClick = (buttonName, offsetvalue) => {
+    scrollToOffset(offsetvalue); // Adjust offset values as needed
+    setActiveButton(buttonName);
+  };
+
+  // useEffect(() => {
+  //   // Function to handle scroll event
+  //   const handleScroll = () => {
+  //     // Get the scroll position
+  //     const scrollPosition = window.scrollY;
+  //     console.log("Scroll position:", scrollPosition);
+
+  //     // Determine which section is currently in view
+  //     const offset1 = document.getElementById("offset1").offsetTop;
+
+  //     if (scrollPosition >= offset1) {
+  //       setActiveButton("Skills");
+  //     } else {
+  //       setActiveButton("Home");
+  //     }
+  //   };
+
+  //   // Add scroll event listener
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   // Remove scroll event listener on component unmount
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <nav className="bg-opacity-20 bg-black p-2 fixed top-0 left-0 w-full z-50">
@@ -102,37 +132,72 @@ const Navbar = ({ parallaxRef }) => {
       <ul className="hidden md:flex text-white font-semibold py-2 text-3xl justify-center space-x-7">
         <li>
           <button
-            className="focus:outline-none"
-            onClick={() => scrollToOffset(0)}
+            className={`focus:outline-none ${
+              activeButton === "Home"
+                ? "border-b-2 border-black transition duration-600 ease-in-out text-4xl outline-text"
+                : ""
+            }`}
+            onClick={() => handleClick("Home", 0)}
           >
             Home
           </button>
         </li>
         <li>
           <button
-            className="focus:outline-none"
-            onClick={() => scrollToOffset(1)}
+            className={`focus:outline-none ${
+              activeButton === "Skills"
+                ? "border-b-2 border-black transition duration-600 ease-in-out text-4xl outline-text"
+                : ""
+            }`}
+            onClick={() => handleClick("Skills", 1)}
           >
             Skills
           </button>
         </li>
         <li>
           <button
-            className="focus:outline-none"
-            onClick={() => scrollToOffset(2)}
+            className={`focus:outline-none ${
+              activeButton === "Project"
+                ? "border-b-2 border-black transition duration-600 ease-in-out text-4xl outline-text"
+                : ""
+            }`}
+            onClick={() => handleClick("Project", 2)}
           >
             Projects
           </button>
         </li>
         <li>
           <button
-            className="focus:outline-none"
-            onClick={() => scrollToOffset(3)}
+            className={`focus:outline-none ${
+              activeButton === "About"
+                ? "border-b-2 border-black transition duration-600 ease-in-out text-4xl outline-text"
+                : ""
+            }`}
+            onClick={() => handleClick("About", 3)}
           >
-            About Me
+            About
           </button>
         </li>
       </ul>
+
+      <style jsx>{`
+        .outline-text {
+          position: relative;
+          color: white; /* Ensures the text color is white */
+        }
+
+        .outline-text::before {
+          content: attr(data-text);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          color: black;
+          z-index: -1;
+          -webkit-text-stroke: 1px black; /* Adjust stroke width if needed */
+        }
+      `}</style>
     </nav>
   );
 };

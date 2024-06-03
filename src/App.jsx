@@ -2,13 +2,14 @@ import React, { useEffect, useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
-import { links } from "./config/data";
+import { links, about } from "./config/data";
 import Skills from "./components/Skills";
 import Carousel from "./components/MiniProject";
 import { projectdata } from "./config/projectdata";
 import Projects from "./components/Projects";
 import ProjectSection from "./components/ProjectsSection/ProjectSection";
 import Aos from "aos";
+import "./App.css";
 import Aboutme from "./components/AboutMe/Aboutme";
 
 // const url = (name, wrap = false) =>`${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`;
@@ -17,6 +18,18 @@ import Aboutme from "./components/AboutMe/Aboutme";
 export default function App() {
   useEffect(() => {
     Aos.init();
+    // const handleScroll = () => {
+    //   // Your scroll event handling logic here
+    //   console.log("Scrolled through Parallax");
+    // };
+    // // Access the underlying scrollable container of Parallax and attach onScroll event listener
+    // const parallaxContainer = parallax.current.container;
+    // parallaxContainer.addEventListener("scroll", handleScroll);
+
+    // return () => {
+    //   // Cleanup: Remove the scroll event listener when component unmounts
+    //   parallaxContainer.removeEventListener("scroll", handleScroll);
+    // };#f19f4d
   }, []);
 
   const parallax = useRef(null);
@@ -32,7 +45,7 @@ export default function App() {
 
   return (
     <div
-      className="w-full h-[100vh]"
+      className="w-full h-[100vh] App"
       style={{
         background: `linear-gradient(136deg,${gradient})`,
         backgroundSize: "1200% 1200%",
@@ -43,17 +56,17 @@ export default function App() {
         <ParallaxLayer
           offset={1}
           speed={1}
-          style={{ backgroundColor: "#805E73" }}
+          style={{ backgroundColor: "#f19f4d" }}
         />
         <ParallaxLayer
           offset={2}
           speed={1}
-          style={{ backgroundColor: "#87BCDE" }}
+          style={{ backgroundColor: "#d9d9d9" }}
         />
         <ParallaxLayer
           offset={3}
           speed={1}
-          style={{ backgroundColor: "yellow" }}
+          style={{ backgroundColor: "#0b3c5d" }}
         />
 
         <ParallaxLayer
@@ -79,7 +92,7 @@ export default function App() {
           />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.3 }}>
+        <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.2 }}>
           <img
             src="../images/css.png"
             style={{ display: "block", width: "20%", marginLeft: "55%" }}
@@ -145,6 +158,63 @@ export default function App() {
           />
         </ParallaxLayer>
 
+        {/* 3 */}
+
+        <ParallaxLayer offset={3} speed={0.8} style={{ opacity: 0.3 }}>
+          <img
+            src="../images/css.png"
+            style={{ display: "block", width: "20%", marginLeft: "55%" }}
+            alt="im"
+          />
+          <img
+            src="../images/git.png"
+            style={{ display: "block", width: "10%", marginLeft: "15%" }}
+            alt="im"
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={3.75} speed={0.5} style={{ opacity: 0.1 }}>
+          <img
+            src="../images/cpp.svg"
+            style={{ display: "block", width: "15%", marginLeft: "70%" }}
+            alt="im"
+          />
+          {/* <img src='../images/cloud.svg' style={{ display: 'block', width: '20%', marginLeft: '40%' }} alt='im'/> */}
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={3} speed={0.2} style={{ opacity: 0.2 }}>
+          <img
+            src="../images/python.png"
+            style={{ display: "block", width: "10%", marginLeft: "10%" }}
+            alt="im"
+          />
+          <img
+            src="../images/html.png"
+            style={{ display: "block", width: "20%", marginLeft: "75%" }}
+            alt="im"
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={3.6} speed={-0.1} style={{ opacity: 0.4 }}>
+          <img
+            src="../images/js.png"
+            style={{ display: "block", width: "20%", marginLeft: "60%" }}
+            alt="im"
+          />
+          <img
+            src="../images/tailwind.png"
+            style={{ display: "block", width: "25%", marginLeft: "30%" }}
+            alt="im"
+          />
+          <img
+            src="../images/mongo.webp"
+            style={{ display: "block", width: "10%", marginLeft: "80%" }}
+            alt="im"
+          />
+        </ParallaxLayer>
+
+        {/*  */}
+
         <ParallaxLayer
           offset={2.5}
           speed={-0.4}
@@ -155,7 +225,7 @@ export default function App() {
             pointerEvents: "none",
           }}
         >
-          <img src="../images/earth.svg" style={{ width: "60%" }} alt="im" />
+          {/* <img src="../images/earth.svg" style={{ width: "60%" }} alt="im" /> */}
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -240,7 +310,13 @@ export default function App() {
           }}
         >
           {/* <img src="../images/bash.svg" style={{ width: "40%" }} alt="im" /> */}
-          <Aboutme />
+          <Aboutme
+            heading={about.heading}
+            message={about.message}
+            link={about.imageLink}
+            imgSize={about.imageSize}
+            resume={about.resume}
+          />
         </ParallaxLayer>
       </Parallax>
     </div>

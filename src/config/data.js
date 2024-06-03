@@ -1,7 +1,13 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { SiLeetcode, SiGeeksforgeeks, SiCodechef, SiHackerrank } from 'react-icons/si';
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  SiLeetcode,
+  SiGeeksforgeeks,
+  SiCodechef,
+  SiHackerrank,
+} from "react-icons/si";
 
-const links =[{
+const links = [
+  {
     image: FaGithub,
     url: "https://github.com/kirti-poddar151",
   },
@@ -22,9 +28,74 @@ const links =[{
     url: "https://twitter.com/kirtipoddar10",
   },
   {
-      image: SiHackerrank,
-      url: "https://auth.geeksforgeeks.org/user/kirtipoddar151/practice/",
+    image: SiHackerrank,
+    url: "https://auth.geeksforgeeks.org/user/kirtipoddar151/practice/",
   },
-]
+];
+const skills = [
+  { name: "ReactJs", icon: "../images/Reactlogo.png" },
+  { name: "Node.js", icon: "../images/node.png" },
+  { name: "HTML", icon: "../images/htmllogo.png" },
+  { name: "MongoDB", icon: "../images/mongo.png" },
+  { name: "Python", icon: "../images/python.png" },
+  { name: "Redux", icon: "../images/Redux.png" },
+  { name: "Git", icon: "../images/git.png" },
+  { name: "Graphql", icon: "../images/Graph.png" },
+  { name: "JavaScript", icon: "../images/JSlogo.png" },
+  { name: "CSS", icon: "../images/csslogo.png" },
+];
 
-export { links };
+const experience = [
+  {
+    year: "2023",
+    works: [
+      {
+        name: "Reacj Js Developer",
+        company: "Cognizant",
+        desc: "Learned sometging",
+      },
+      {
+        name: "Learned Full Stack",
+        company: "Cognizant",
+        desc: "Learned sometging",
+      },
+    ],
+  },
+  {
+    year: "2022",
+    works: [
+      {
+        name: "Learned Basics of Web Development",
+        company: "Cognizant",
+        desc: "Learned sometging",
+      },
+      {
+        name: "Machine Learning",
+        company: "Cognizant",
+        desc: "Learned sometging",
+      },
+    ],
+  },
+  {
+    year: "2021",
+    works: [
+      {
+        name: "Image Processing",
+        company: "Cognizant",
+        desc: "Learned sometging",
+      },
+    ],
+  },
+];
+
+const about = {
+  show: true,
+  heading: "About Me",
+  imageLink: require("../components/AboutMe/KTM.png"),
+  imageSize: 375,
+  message:
+    "My name is Kirti Poddar. I'll be graduating from VIT Bhopal University in 2024 with a Bachelor's degree in Computer Science and Engineering. I am a self-driven and motivated Computer Science student. I have ability to work in team environments, and strong attention to detail. I am looking for an IT-related internship with a forward-moving company.",
+  resume:
+    "https://drive.google.com/file/d/1oczWBYU3q6xtEf2yqPEG_1Tg3QzHgsrr/view?usp=sharing",
+};
+export { links, skills, experience, about };

@@ -1,8 +1,9 @@
-.App {
-  text-align: center;
+* Hide scrollbar globally */
+body::-webkit-scrollbar {
+  display: none;
 }
 
-.bb{
-  background-color: #253237;
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
-
