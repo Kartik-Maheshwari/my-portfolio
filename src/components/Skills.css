@@ -1,7 +1,6 @@
 .head-text {
   font-size: 2.75rem;
   font-weight: 800;
-  /* text-align: center; */
   color: var(--black-color);
   text-transform: capitalize;
 
@@ -68,7 +67,7 @@
   }
 }
 
-/* Existing styles */
+
 .app__skills-list {
   flex: 1;
   display: flex;
@@ -132,7 +131,7 @@
   }
 }
 
-/* New styles for mobile infinite scroll */
+
 @media screen and (max-width: 600px) {
   .app__skills-list {
     gap: 50px;
@@ -150,7 +149,7 @@
 
 }
 
-/* Keyframes for infinite scroll animation */
+
 @keyframes scroll-left {
   0% {
     transform: translateX(100%);
@@ -207,7 +206,7 @@
       font-weight: 500;
 
       @media screen and (max-width: 600px) {
-        font-size: 1rem; /* Adjust the size as needed */
+        font-size: 1rem;
       }
     }
 
@@ -216,7 +215,7 @@
       margin-top: 5px;
 
       @media screen and (max-width: 600px) {
-        font-size: 0.875rem; /* Adjust the size as needed */
+        font-size: 0.875rem; 
       }
     }
   }
@@ -230,7 +229,7 @@
     color: var(--secondary-color);
 
     @media screen and (max-width: 600px) {
-      font-size: 1rem; /* Adjust the size as needed */
+      font-size: 1rem;
     }
   }
 

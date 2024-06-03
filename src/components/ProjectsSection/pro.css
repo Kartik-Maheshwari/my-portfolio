@@ -1,24 +1,24 @@
-/* Custom scrollbar styles */
+
 .project-section {
   cursor: pointer;
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-y: auto;
   }
   
   .project-section::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+    width: 12px;
   }
   
   .project-section::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Track color */
+    background: #f1f1f1; 
   }
   
   .project-section::-webkit-scrollbar-thumb {
-    background-color: #888; /* Thumb color */
-    border-radius: 6px; /* Roundness of the scroll thumb */
-    border: 3px solid #f1f1f1; /* Space around thumb */
+    background-color: #888;
+    border-radius: 6px; 
+    border: 3px solid #f1f1f1;
   }
   
   .project-section::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Thumb color on hover */
+    background: #555;
   }
   
