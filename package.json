@@ -1,6 +1,5 @@
 {
   "name": "my-portfolio",
-  "homepage": "https://kartik-maheshwari.github.io/My-Portfolio-Website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
