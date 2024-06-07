@@ -179,25 +179,6 @@ const Navbar = ({ parallaxRef }) => {
           </button>
         </li>
       </ul>
-
-      <style jsx>{`
-        .outline-text {
-          position: relative;
-          color: white; /* Ensures the text color is white */
-        }
-
-        .outline-text::before {
-          content: attr(data-text);
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          color: black;
-          z-index: -1;
-          -webkit-text-stroke: 1px black; /* Adjust stroke width if needed */
-        }
-      `}</style>
     </nav>
   );
 };

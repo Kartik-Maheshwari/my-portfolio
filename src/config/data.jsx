@@ -1,4 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import aboutImage from "../components/AboutMe/KTM.png";
+
 import {
   SiLeetcode,
   SiGeeksforgeeks,
@@ -91,7 +93,7 @@ const experience = [
 const about = {
   show: true,
   heading: "About Me",
-  imageLink: require("../components/AboutMe/KTM.png"),
+  imageLink: aboutImage,
   imageSize: 375,
   message:
     "My name is Kirti Poddar. I'll be graduating from VIT Bhopal University in 2024 with a Bachelor's degree in Computer Science and Engineering. I am a self-driven and motivated Computer Science student. I have ability to work in team environments, and strong attention to detail. I am looking for an IT-related internship with a forward-moving company.",
